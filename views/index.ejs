@@ -25,6 +25,9 @@
     	<div ng-repeat="beer in beers">
     		{{beer.name}} - Rating:
     		{{beer.rating}}
+        <span>
+          <a href="#/beers/{{$index}}">Notes</a>
+        </span>
     	</div>
 
     	<form ng-submit="addBeer()"
@@ -46,5 +49,25 @@
     	  <button type="submit" class="btn btn-primary">Post</button>
     	</form>
     </script>
+
+    <script type="text/ng-template" id="/beers.html">
+      <div class="page-header">
+        <h3>
+          <span>
+            {{beer.name}}
+          </span>
+          <span>
+            - Rating: 
+            {{beer.rating}}
+          </span>
+        </h3>
+      </div>
+
+      <div ng-repeat="note in beer.notes">
+        {{note.date}} - {{note.thoughts}}
+      </div>
+
+    </script>
+
   </body>
 </html>
