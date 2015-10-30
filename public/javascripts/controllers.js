@@ -1,6 +1,6 @@
 angular.module("beerReview.controllers", [])
 
-.controller('BeerController', [
+.controller('MainController', [
 '$scope',
 'beers',
 function($scope, beers){
@@ -10,7 +10,7 @@ function($scope, beers){
   	if ($scope.name === '') { return; }
   	$scope.beers.push({ 
   		name: $scope.name, 
-  		ratine: $scope.rating
+  		rating: $scope.rating
   	});
   	$scope.name = '';
   	$scope.rating = '';
