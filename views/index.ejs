@@ -8,9 +8,10 @@
   	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
   	<script src="/javascripts/app.js"></script>
   	<script src="/javascripts/controllers.js"></script>
+  	<script src="/javascripts/factories.js"></script>
    
   </head>
-  <body ng-app="beerReview" ng-controller="MainController">
+  <body ng-app="beerReview" ng-controller="BeerController">
   	<div ng-repeat="beer in beers">
   		{{beer.name}}
   		{{beer.rating}}
