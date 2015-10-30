@@ -26,7 +26,10 @@
     		{{beer.name}} - Rating:
     		{{beer.rating}}
         <span>
-          <a href="#/beers/{{$index}}">Notes</a>
+          <a href="#/beers/{{$index}}"> 
+            <span ng-show="beer.notes"> Notes ({{beer.notes.length}}) 
+            </span>
+          </a>
         </span>
     	</div>
 
