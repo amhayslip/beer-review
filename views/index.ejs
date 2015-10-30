@@ -11,7 +11,9 @@
    
   </head>
   <body ng-app="beerReview" ng-controller="MainController">
-  	{{test}}
-
+  	<div ng-repeat="beer in beers">
+  		{{beer.name}}
+  		{{beer.rating}}
+  	</div>
   </body>
 </html>
